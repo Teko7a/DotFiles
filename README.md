@@ -1,8 +1,7 @@
 # DotFiles
 What? You did reset your os once again? 😅
 
-Thanks to GITHUB, it's easiest thing to restore!
-🔏
+Thanks to GITHUB, it's easiest thing to restore! 🔏
 
 # Things you need to do firstly
 ## git
@@ -52,7 +51,7 @@ yay -S paru
 
 And, just use `paru -S softwareAUR.txt`.
 
-btw, get this file as usual:
+btw, update this file daily:
 
 ```bash
 paru -Qeq > ./softwareAUR.txt
@@ -81,13 +80,12 @@ git clone git@github.com:ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 ```
 
 # neovim
+After auto download, you need to:
 
-Run `sudo yarn global neovim`.
+ - Run `sudo yarn global neovim` and goto `coc.nvim`, then run `yarn install`.
 
-goto the `markdown-preview.nvim/app`，and run `yarn install`
+ - goto the `markdown-preview.nvim/app`，and run `yarn install`
 
 # virtual machine
 
 run `neofetch` to get your kernel version first, and install `linux510-virtualbox-host-modules` (replace the `510` to your kernel version)
-
-
