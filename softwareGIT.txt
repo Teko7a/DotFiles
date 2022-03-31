@@ -1,0 +1,1 @@
+git@github.com:Icalingua-plus-plus/Icalingua-plus-plus.git

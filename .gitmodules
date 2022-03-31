@@ -1,0 +1,3 @@
+[submodule "myVimrc"]
+	path = myVimrc
+	url = git@github.com:Teko7a/myVimrc.git
