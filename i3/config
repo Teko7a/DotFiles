@@ -23,9 +23,16 @@ exec_always sleep 0.5; compton --backend xrender
 exec_always killall clipit; sleep 0.5; clipit
 exec_always --no-startup-id fcitx5 -d
 exec_always ~/.run_polybar.sh
+
+# the HDMI screen dont have unique name, which confuses me a lot...
 exec_always xrandr --output HDMI-1-2 --same-as eDP-1 --auto
 exec_always xrandr --output HDMI-1-1 --same-as eDP-1 --auto
-exec_always xrandr --output HDMI-1 --same-as eDP-1 --auto
+exec_always xrandr --output HDMI-1-0 --same-as eDP-1 --auto
+exec_always xrandr --output HDMI-1   --same-as eDP-1 --auto
+exec_always xrandr --output HDMI-1-2 --same-as  DP-1 --auto
+exec_always xrandr --output HDMI-1-1 --same-as  DP-1 --auto
+exec_always xrandr --output HDMI-1-0 --same-as  DP-1 --auto
+exec_always xrandr --output HDMI-1   --same-as  DP-1 --auto
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 
