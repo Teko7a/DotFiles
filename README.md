@@ -70,7 +70,7 @@ python -m pip install --upgrade pip
 
 .. just a notification, i think you've already read the file `./messFiles/look-these.md`
 
-Also, the file [fonts](./fonts.txt) will lead you. This is a long file. you just need to `vim -d yourFont ./fonts.txt`
+Also, the file [fonts](./fontsGit.txt) will lead you. This is a long file. you just need to `vim -d yourFont ./fonts.txt`
 
 # oh-my-zsh
 

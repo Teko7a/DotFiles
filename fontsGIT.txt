@@ -1,3 +1,4 @@
 git@github.com:JetBrains/JetBrainsMono.git
 https://github.com/adobe-fonts/source-code-pro
 https://github.com/ryanoasis/nerd-fonts
+https://github.com/powerline/fonts
