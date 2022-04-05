@@ -79,6 +79,7 @@ flake8
 flameshot
 flex
 fortune-mod-archlinux
+fpc
 gawk
 gcc
 gcc-libs
@@ -254,6 +255,7 @@ snapd
 sof-firmware
 spectre-meltdown-checker
 speedtest-cli
+steam-manjaro
 subversion
 sudo
 sysfsutils
