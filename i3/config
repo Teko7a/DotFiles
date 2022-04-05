@@ -28,6 +28,8 @@ set $ws8 "8"
 set $ws9 "9"
 
 font pango:monospace 8
+new_window none
+gaps inner 8
 
 exec --no-startup-id dex --autostart --environment i3
 exec_always variety
