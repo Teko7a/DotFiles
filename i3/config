@@ -17,7 +17,6 @@ mode "resize" {
 }
 
 set $ws1 "1"
-set $ws10 "10"
 set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
@@ -26,10 +25,15 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
+set $ws10 "10"
 
-font pango:monospace 8
+font pango:Jetbrains Mono
 new_window none
 gaps inner 8
+floating_modifier $mod
+floating_minimum_size 700x400
+# floating_maximum_size 700x400
+# for_window [instance=kitty]sticky enable
 
 exec --no-startup-id dex --autostart --environment i3
 exec_always variety
@@ -92,7 +96,7 @@ bindsym $mod+Shift+n exec killall screenkey
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+s exec --no-startup-id flameshot screen -c
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 bindsym $mod+Up focus up
 bindsym $mod+a focus parent
 bindsym $mod+c exec --no-startup-id google-chrome-stable
@@ -106,7 +110,7 @@ bindsym $mod+n killall screenkey; exec --no-startup-id screenkey
 bindsym $mod+q exec xflock4
 bindsym $mod+r mode "resize"
 bindsym $mod+s exec --no-startup-id flameshot gui    -c
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+space focus mode_toggle
 bindsym $mod+v split v
 bindsym $mod+w layout tabbed
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -115,7 +119,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 
 bar {
-        status_command i3status
+  position top
+  # i3bar_command i3bar --transparency #000000FF
+  status_command i3status
 }
 
 exec i3-config-wizard
