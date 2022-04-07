@@ -14,7 +14,7 @@ order += "tztime local"
 order += "battery all"
 
 wireless wlp4s0 {
-  format_up = " %quality  %essid"
+  format_up = "💕 %quality  %essid"
   format_down = "W: down"
 }
 
@@ -48,7 +48,7 @@ memory {
 }
 
 tztime local {
-  format = "%m-%d %H:%M %A"
+  format = "已经 %m-%d %H:%M %A 了"
 }
 
 
