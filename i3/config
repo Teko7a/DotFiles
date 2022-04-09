@@ -70,7 +70,8 @@ bindsym $mod+Ctrl+Left  workspace prev
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Down focus down
 bindsym $mod+Left focus left
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty -vv
+# bindsym $mod+Return exec kitty
 bindsym $mod+Right focus right
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$left move left
@@ -106,7 +107,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+h split h
 bindsym $mod+m exec --no-startup-id pcmanfm
 bindsym $mod+minus scratchpad show
-bindsym $mod+n killall screenkey; exec --no-startup-id screenkey
+bindsym $mod+n exec --no-startup-id screenkey
 bindsym $mod+q exec xflock4
 bindsym $mod+r mode "resize"
 bindsym $mod+s exec --no-startup-id flameshot gui    -c

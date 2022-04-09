@@ -10,3 +10,9 @@
 [submodule "alacritty/alacritty-theme"]
 	path = alacritty/alacritty-theme
 	url = git@github.com:eendroroy/alacritty-theme.git
+[submodule "alacritty/colors/alacritty-colorscheme"]
+	path = alacritty/colors/alacritty-colorscheme
+	url = git@github.com:toggle-corp/alacritty-colorscheme.git
+[submodule "alacritty/colors/alacritty-theme"]
+	path = alacritty/colors/alacritty-theme
+	url = git@github.com:eendroroy/alacritty-theme.git

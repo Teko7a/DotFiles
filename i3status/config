@@ -14,7 +14,7 @@ order += "tztime local"
 order += "battery all"
 
 wireless wlp4s0 {
-  format_up = "💕 %quality  %essid"
+  format_up = "🏂%essid[%quality]"
   format_down = "W: down"
 }
 
@@ -48,12 +48,12 @@ memory {
 }
 
 tztime local {
-  format = "已经 %m-%d %H:%M %A 了"
+  format = "{%m-%d} (%H:%M %A)"
 }
 
-
 cpu_temperature 0 {
-  format = " %degrees °C"
+  format = "🤠  %degrees °C"
   max_threshold = 85
-  path = "/sys/class/thermal/thermal_zone0/temp"
+  # path = "/sys/class/thermal/thermal_zone0/temp"
+  path = "/sys/devices/virtual/thermal/thermal_zone3/temp"
 }

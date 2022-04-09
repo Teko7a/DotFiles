@@ -67,9 +67,9 @@ python -m pip install --upgrade pip
 
 # fonts
 
-.. just a notification, i think you've already read the file `./messFiles/look-these.md`
+.. just as a remind, i think you've already read the file `./messFiles/look-these.md`
 
-Also, the file [fonts](./fontsGIT.txt) will lead you. This is a long file. you just need to `vim -d yourFont ./fonts.txt`
+Look the file [fonts](./fontsGIT.txt) will lead you.
 
 # oh-my-zsh
 
