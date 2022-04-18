@@ -15,6 +15,7 @@ read -p 'This is Dangerous! Confirm [y/n]? '  confirm
 if [ $confirm == 'y' ]; then
   echo "[OK] resetting..."
   # this will set a backup file end with '~' if 'mv' crushed
+  mv ./myVimrc nvim
   cp -rb `cat ./mvList.txt` ~/.config
   cp -rb ./homeFiles/.* ~
 else
