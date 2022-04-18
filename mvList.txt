@@ -1,0 +1,17 @@
+alacritty
+autostart
+clipit
+fcitx
+fcitx5
+gtk-3.0
+i3
+i3status
+kitty
+myVimrc
+neofetch
+pcmanfm
+polybar
+ranger
+rofi
+wallpapers
+screenkey.json
