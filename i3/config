@@ -43,7 +43,8 @@ exec_always sleep 0.5; flameshot
 exec_always sleep 0.5; compton --backend xrender
 exec_always killall clipit; sleep 0.5; clipit
 exec_always --no-startup-id fcitx5 -d
-exec_always xrandr --output HDMI-1-0 --same-as DP-1 --auto
+# exec_always xrandr --output HDMI-1-0 --same-as DP-1 --auto
+exec_always xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x840 --rotate normal --output DP-1 --off --output HDMI-1 --off --output HDMI-1-0 --mode 1920x1080 --pos 1920x0 --rotate right
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -108,6 +109,7 @@ bindsym $mod+h split h
 bindsym $mod+m exec --no-startup-id pcmanfm
 bindsym $mod+minus scratchpad show
 bindsym $mod+n exec --no-startup-id screenkey
+bindsym $mod+p move workspace to output next
 bindsym $mod+q exec xflock4
 bindsym $mod+r mode "resize"
 bindsym $mod+s exec --no-startup-id flameshot gui    -c
