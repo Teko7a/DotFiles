@@ -25,3 +25,12 @@ acpi
 
 # save fonts
 fc-cache -fv
+
+# prime fuck unordered_map
+```txt
+107897
+126271
+```
+
+# use this to control volumn!
+pavucontrol

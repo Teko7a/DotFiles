@@ -30,6 +30,7 @@ ccls
 clipit
 cloc
 cmake
+cmatrix
 code
 code-marketplace
 copyq
@@ -41,6 +42,7 @@ crda
 cronie
 cryptsetup
 ctags
+deepin-file-manager
 deluge
 device-mapper
 dfc
@@ -53,6 +55,7 @@ dnsmasq
 docker
 dosfstools
 downgrade
+dpkg
 e2fsprogs
 ecryptfs-utils
 efibootmgr
@@ -113,6 +116,7 @@ gzip
 haveged
 hexchat
 htop
+i3blocks
 inetutils
 intel-ucode
 inxi
@@ -206,10 +210,10 @@ noto-fonts-extra
 npm
 nss-mdns
 ntfs-3g
-ntp
 nvidia-prime
 nvidia-utils
 obs-studio
+openntpd
 openresolv
 openssh
 os-prober
@@ -220,6 +224,7 @@ pandoc
 paru
 patch
 patchutils
+pavucontrol
 pciutils
 pcmanfm
 peek
@@ -234,6 +239,7 @@ procps-ng
 psmisc
 pulseaudio
 python-pyalsa
+qbittorrent
 qt5ct
 ranger
 reiserfsprogs
@@ -247,6 +253,7 @@ sed
 shadow
 shadowsocks
 shadowsocks-qt5
+sl
 slim
 slock
 slop
@@ -264,8 +271,27 @@ systemd
 systemd-fsck-silent
 systemd-sysvcompat
 tar
+telescope
 terminus-font
 texinfo
+texlive-bibtexextra
+texlive-core
+texlive-fontsextra
+texlive-formatsextra
+texlive-games
+texlive-humanities
+texlive-langchinese
+texlive-langcyrillic
+texlive-langextra
+texlive-langgreek
+texlive-langjapanese
+texlive-langkorean
+texlive-latexextra
+texlive-music
+texlive-pictures
+texlive-pstricks
+texlive-publishers
+texlive-science
 the_silver_searcher
 tldr
 tlp
@@ -287,6 +313,7 @@ v2ray
 v2ray-desktop
 v2raya
 variety
+ventoy-bin
 vi
 vibrancy-icons-teal
 viewnior
