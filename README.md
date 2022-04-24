@@ -71,9 +71,9 @@ paru -Qeq > ./softwareAUR.txt
 ## pip
 
 ```bash
-wget https://bootstrap.pypa.io/get-pip.py
-python get-pip.py
-python -m pip install --upgrade pip
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo python get-pip.py
+pip install -U pip
 ```
 
 # fonts
