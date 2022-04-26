@@ -69,7 +69,8 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness 
 # bindsym $mod+<++> exec --no-startup-id <++>
 # bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 # bindsym $mod+Ctrl+a exec terminal -e 'setup'
-bindsym $mod+m exec --no-startup-id pcmanfm
+# bindsym $mod+m exec --no-startup-id pcmanfm
+bindsym $mod+m exec --no-startup-id cutefish-filemanager
 bindsym $mod+n exec --no-startup-id screenkey
 bindsym $mod+Shift+n exec killall screenkey
 bindsym $mod+c exec --no-startup-id google-chrome-stable
@@ -146,7 +147,7 @@ bindsym $mod+Shift+s sticky toggle
 
 # screenshot
 bindsym $mod+i exec --no-startup-id flameshot gui -c
-bindsym $mod+Shift+i exec --no-startup-id flameshot -c
+bindsym $mod+Shift+i exec --no-startup-id flameshot full -c
 
 # focus the parent container
 # bindsym $mod+a focus parent
@@ -167,16 +168,27 @@ bindsym $mod+Ctrl+Left  workspace prev
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
 
-set $ws1 1:壹
-set $ws2 2:貳
-set $ws3 3:叄
-set $ws4 4:肆
-set $ws5 5:伍
-set $ws6 6:陸
-set $ws7 7:柒
-set $ws8 8:捌
-set $ws9 9:玖
-set $ws0 0:拾
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws0 0
+
+# set $ws1 1:壹
+# set $ws2 2:貳
+# set $ws3 3:叄
+# set $ws4 4:肆
+# set $ws5 5:伍
+# set $ws6 6:陸
+# set $ws7 7:柒
+# set $ws8 8:捌
+# set $ws9 9:玖
+# set $ws0 0:拾
 
 # switch to workspace
 bindsym $mod+0 workspace number $ws10
@@ -221,7 +233,6 @@ bindsym $mod+Shift+0 move container to workspace $ws10, workspace $ws10
 # assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
-# for_window [title="alsamixer"] floating enable border pixel 1
 # for_window [class="calamares"] floating enable border normal
 # for_window [class="Clipgrab"] floating enable
 # for_window [title="File Transfer*"] floating enable
@@ -303,14 +314,15 @@ bindsym $mod+q exec --no-startup-id xflock4
 
 # Autostart applications
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id variety; sleep 1; picom --backend xrender
-exec --no-startup-id start_conky_live_green
-exec --no-startup-id nm-applet
+exec --no-startup-id variety
+exec --no-startup-id sleep 1; compton --backend xrender
+# exec --no-startup-id sleep 1; start_conky_live_green
+exec --no-startup-id sleep 1; nm-applet
 
 exec --no-startup-id killall clipit; sleep 0.5; clipit
 exec --no-startup-id xmodmap ~/.xmodmap
 exec --no-startup-id flameshot
-exec --no-startup-id fciex5 -d
+exec --no-startup-id fcitx5 -d
 
 exec xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x420 --rotate normal --output DP-1 --off --output HDMI-1 --off --output HDMI-1-0 --mode 1920x1080 --pos 1920x0 --rotate right
 
@@ -332,40 +344,40 @@ exec --no-startup-id xfce4-power-manager
 # to:
 # background $term_background
 # Same logic applied to everything else.
-set_from_resource $term_background background
-set_from_resource $term_foreground foreground
-set_from_resource $term_color0     color0
-set_from_resource $term_color1     color1
-set_from_resource $term_color2     color2
-set_from_resource $term_color3     color3
-set_from_resource $term_color4     color4
-set_from_resource $term_color5     color5
-set_from_resource $term_color6     color6
-set_from_resource $term_color7     color7
-set_from_resource $term_color8     color8
-set_from_resource $term_color9     color9
-set_from_resource $term_color10    color10
-set_from_resource $term_color11    color11
-set_from_resource $term_color12    color12
-set_from_resource $term_color13    color13
-set_from_resource $term_color14    color14
-set_from_resource $term_color15    color15
+# set_from_resource $term_background background
+# set_from_resource $term_foreground foreground
+# set_from_resource $term_color0     color0
+# set_from_resource $term_color1     color1
+# set_from_resource $term_color2     color2
+# set_from_resource $term_color3     color3
+# set_from_resource $term_color4     color4
+# set_from_resource $term_color5     color5
+# set_from_resource $term_color6     color6
+# set_from_resource $term_color7     color7
+# set_from_resource $term_color8     color8
+# set_from_resource $term_color9     color9
+# set_from_resource $term_color10    color10
+# set_from_resource $term_color11    color11
+# set_from_resource $term_color12    color12
+# set_from_resource $term_color13    color13
+# set_from_resource $term_color14    color14
+# set_from_resource $term_color15    color15
 
 # hide/unhide bar unless you press $mod
 bindsym $mod+y bar mode toggle
 
 bar {
   position bottom
-  i3bar_command i3bar --transparency
-  # status_command i3blocks
-  status_command i3status
-  colors {
-    background #9370DB3F
-		separator #778899
-		focused_workspace  	#778899A5 #87CEEBA5 #FFFAFAF5
-		inactive_workspace 	#7788993F #AFEEEE3F #FFFAFAF5
-		urgent_workspace   	#80808072 #FF450072 #FFFAFAF5
-  }
+    i3bar_command i3bar --transparency
+# status_command i3blocks
+    status_command i3status
+    colors {
+      background #9370DB3F
+      separator #778899
+      focused_workspace  	#778899A5 #87CEEBA5 #FFFAFAF5
+      inactive_workspace 	#7788993F #AFEEEE3F #FFFAFAF5
+      urgent_workspace   	#80808072 #FF450072 #FFFAFAF5
+    }
 }
 
 # Theme colors
@@ -375,7 +387,6 @@ client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
 client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
 client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000 
-
 client.background       #2B2C2B
 
 #############################
@@ -383,7 +394,7 @@ client.background       #2B2C2B
 #############################
 
 # Set inner/outer gaps
-gaps inner 7
+gaps inner 10
 gaps outer 3
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.

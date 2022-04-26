@@ -34,3 +34,22 @@ fc-cache -fv
 
 # use this to control volumn!
 pavucontrol
+
+# do system config in bash
+bmenu
+
+# do android projection
+
+```cpp
+paru -S android-tools scrcpy
+```
+
+```bash
+adb --version
+adb devices
+adb shell ip a
+adb tcpip 5555
+adb devices
+adb connect 192.168.0.100:5555
+scrcpy
+```
