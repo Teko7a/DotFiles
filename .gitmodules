@@ -16,3 +16,6 @@
 [submodule "alacritty/colors/alacritty-theme"]
 	path = alacritty/colors/alacritty-theme
 	url = git@github.com:eendroroy/alacritty-theme.git
+[submodule "ranger"]
+	path = ranger
+	url = git@github.com:Teko7a/ranger.git
