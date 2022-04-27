@@ -16,8 +16,11 @@ ssh-keygen -t rsa -b 4096 -C 'tekola@qq.com'
 
 ## clone me!
 
+> This will cost much time.
+
 ```bash
-git clone --recurse-submodules git@github.com:Teko7a/DotFiles.git
+git clone git@github.com:Teko7a/DotFiles.git
+--recurse-submodules --remote-submodules
 ```
 
 ## aur
