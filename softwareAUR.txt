@@ -45,7 +45,6 @@ ctags
 cutefish-calculator
 cutefish-filemanager
 deepin-diskmanager
-deepin-file-manager
 deepin-icon-theme-manjaro
 deluge
 device-mapper
@@ -235,6 +234,7 @@ polybar
 powertop
 procps-ng
 psmisc
+pulseaudio
 python-pyalsa
 qbittorrent
 qt5ct
@@ -322,6 +322,7 @@ vulkan-intel
 vulkan-radeon
 w3m
 wallpapers-juhraya
+wemeet-bin
 wget
 which
 wlroots
