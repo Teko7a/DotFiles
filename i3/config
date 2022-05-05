@@ -52,6 +52,10 @@ bindsym $mod+d exec --no-startup-id rofi -show combi
 # launch categorized menu
 # bindsym $mod+z exec --no-startup-id morc_menu
 
+bindsym $mod+ctrl+n exec --no-startup-id variety -n
+bindsym $mod+ctrl+p exec --no-startup-id variety -p
+bindsym $mod+ctrl+f exec --no-startup-id variety -f
+
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
