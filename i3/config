@@ -37,7 +37,7 @@ font xft:Source Han Sans CN 11
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec kitty
+bindsym $mod+Shift+Return exec kitty
 bindsym $mod+Return exec alacritty -vv
 
 # kill focused window
