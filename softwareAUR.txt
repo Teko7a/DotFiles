@@ -96,6 +96,7 @@ gnome-keyring
 gnome-taquin
 gnome-todo
 google-chrome
+google-chrome-beta
 gparted
 grep
 grub
@@ -115,6 +116,7 @@ gzip
 haveged
 hexchat
 htop
+hugo
 i3-default-artwork
 i3blocks
 inetutils
@@ -147,6 +149,7 @@ lightdm-settings
 lightdm-slick-greeter
 linux515
 linux515-nvidia
+linux515-virtualbox-host-modules
 logrotate
 lolcat
 luarocks
@@ -236,17 +239,20 @@ procps-ng
 psmisc
 pulseaudio
 python-pyalsa
+python2
 qbittorrent
 qt5ct
 ranger
 reiserfsprogs
 rofi
 rsync
+ruby-rake
 s-nail
 sbxkb
 scrcpy
 screenfetch
 screenkey
+sdcc
 sed
 shadow
 shadowsocks
@@ -302,6 +308,7 @@ ttf-inconsolata
 ttf-indic-otf
 ttf-joypixels
 ttf-linux-libertine
+typora-free-cn
 ufw
 unzip
 upower
@@ -317,6 +324,8 @@ vibrancy-icons-teal
 viewnior
 vim
 virtualbox
+virtualbox-ext-oracle
+virtualbox-guest-utils
 volumeicon
 vulkan-intel
 vulkan-radeon
