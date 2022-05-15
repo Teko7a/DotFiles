@@ -39,6 +39,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Shift+Return exec kitty
 bindsym $mod+Return exec alacritty -vv
+bindsym $mod+Ctrl+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -47,7 +48,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+p move workspace to output next
 
 # start program launcher rofi!
-bindsym $mod+d exec --no-startup-id rofi -show combi
+bindsym $mod+d exec --no-startup-id rofi -show combi -show-icons
 
 # launch categorized menu
 # bindsym $mod+z exec --no-startup-id morc_menu
@@ -73,11 +74,10 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness 
 # bindsym $mod+<++> exec --no-startup-id <++>
 # bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 # bindsym $mod+Ctrl+a exec terminal -e 'setup'
-# bindsym $mod+m exec --no-startup-id pcmanfm
-bindsym $mod+m exec --no-startup-id cutefish-filemanager
+bindsym $mod+m exec --no-startup-id dde-file-manager
 bindsym $mod+n exec --no-startup-id screenkey
 bindsym $mod+Shift+n exec killall screenkey
-bindsym $mod+c exec --no-startup-id google-chrome-beta
+bindsym $mod+c exec --no-startup-id google-chrome-stable
 # bindsym $mod+F5 exec terminal -e 'mocp'
 # bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 # bindsym $mod+t exec --no-startup-id pkill picom
@@ -88,7 +88,6 @@ bindsym $mod+c exec --no-startup-id google-chrome-beta
 # bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 # bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 
-# bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help_live.pdf
 # bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # volumn control
@@ -113,7 +112,6 @@ bindsym $mod+Right focus right
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
@@ -170,7 +168,7 @@ bindsym $mod+Ctrl+Left  workspace prev
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
-#                 set $ws2 2:ƒ8§9
+#                 set $ws2 2:ï‚¬
 
 set $ws1 1
 set $ws2 2
@@ -183,16 +181,16 @@ set $ws8 8
 set $ws9 9
 set $ws0 0
 
-# set $ws1 1:Ò¼
-# set $ws2 2:ÙE
-# set $ws3 3:…£
-# set $ws4 4:ËÁ
-# set $ws5 5:Îé
-# set $ws6 6:ê‘
-# set $ws7 7:Æâ
-# set $ws8 8:°Æ
-# set $ws9 9:¾Á
-# set $ws0 0:Ê°
+# set $ws1 "å£¹"
+# set $ws2 "è²³"
+# set $ws3 "å„"
+# set $ws4 "è‚†"
+# set $ws5 "ä¼"
+# set $ws6 "é™¸"
+# set $ws7 "æŸ’"
+# set $ws8 "æŒ"
+# set $ws9 "çŽ–"
+# set $ws0 "æ‹¾"
 
 # switch to workspace
 bindsym $mod+0 workspace number $ws10
@@ -237,34 +235,12 @@ bindsym $mod+Shift+0 move container to workspace $ws10, workspace $ws10
 # assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
-# for_window [class="calamares"] floating enable border normal
-# for_window [class="Clipgrab"] floating enable
-# for_window [title="File Transfer*"] floating enable
-# for_window [class="fpakman"] floating enable
-# for_window [class="Galculator"] floating enable border pixel 1
-# for_window [class="GParted"] floating enable border normal
-# for_window [title="i3_help"] floating enable sticky enable border normal
-# for_window [class="Lightdm-settings"] floating enable
-# for_window [class="Lxappearance"] floating enable border normal
-# for_window [class="Manjaro-hello"] floating enable border normal
-# for_window [class="Manjaro Settings Manager"] floating enable border normal
-# for_window [title="MuseScore: Play Panel"] floating enable
-# for_window [class="Nitrogen"] floating enable sticky enable border normal
-# for_window [class="Oblogout"] fullscreen enable
-# for_window [class="octopi"] floating enable
-# for_window [title="About Pale Moon"] floating enable
-# for_window [class="Pamac-manager"] floating enable
-# for_window [class="Pamac-updater"] floating enable
-# for_window [class="Pavucontrol"] floating enable
-# for_window [class="Qtconfig-qt4"] floating enable border normal
-# for_window [class="qt5ct"] floating enable sticky enable border normal
-# for_window [title="sudo"] floating enable border normal
-# for_window [class="Simple-scan"] floating enable border normal
-# for_window [class="(?i)System-config-printer.py"] floating enable border normal
-# for_window [class="Skype"] floating enable border normal
-# for_window [class="Timeset-gui"] floating enable border normal
-# for_window [class="(?i)virtualbox"] floating enable border normal
-# for_window [class="Xfburn"] floating enable
+for_window [class="netease-cloud-music"] floating enable
+for_window [class="obs"] floating enable
+for_window [class="typora"] floating enable
+for_window [class="deepin-album"] floating enable
+for_window [class="wemeet"] floating enable
+for_window [class="st"] floating enable
 
 # switch to workspace with urgent window automatically
 # for_window [urgent=latest] focus
@@ -314,11 +290,11 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+q exec --no-startup-id xflock4
+# bindsym $mod+q exec --no-startup-id xflock4
 
 # Autostart applications
-exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id variety
+# exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id sleep 1; variety
 exec --no-startup-id sleep 1; compton --backend xrender
 # exec --no-startup-id sleep 1; start_conky_live_green
 exec --no-startup-id sleep 1; nm-applet
@@ -327,10 +303,13 @@ exec --no-startup-id killall clipit; sleep 0.5; clipit
 exec --no-startup-id xmodmap ~/.xmodmap
 exec --no-startup-id flameshot
 exec --no-startup-id fcitx5 -d
+exec --no-startup-id picom
 
 # exec xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x420 --rotate normal --output DP-1 --off --output HDMI-1 --off --output HDMI-1-0 --mode 1920x1080 --pos 1920x0 --rotate right
 
-exec xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output HDMI-1-0 --mode 1920x1080 --pos 0x0 --rotate normal
+# exec sleep 3s; xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal
+
+# exec sleep 3s; xrandr --output eDP-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output HDMI-1-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 

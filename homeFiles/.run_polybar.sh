@@ -1,3 +1,0 @@
-killall polybar
-
-polybar example

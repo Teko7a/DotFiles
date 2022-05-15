@@ -1402,15 +1402,15 @@ schemes:
 
 
 window: {
-  opacity: 0.76
+  opacity: 0.70
 }
+
 colors: *challenger_deep
-# family: Monaco
-# family: Fira Code
+
+# colors: *gruvbox_dark
 
 font: {
-  size: 16,
-  # family: Monaco.ttf
-  family: JetBrainsMono Nerd Font
+  size: 11,
+  family: Source Code Pro
 }
   # background_opacity: 0.76

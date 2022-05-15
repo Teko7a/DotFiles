@@ -1,8 +1,0 @@
-rofi.width:                          100
-rofi.lines:                          3
-rofi.font:                           System San Francisco Display 18
-rofi.bw:                             0
-rofi.padding:                        800
-rofi.eh:                             2
-rofi.color-normal:                   #a02f343f,#a0f3f4f5,#a02f343f,#a02f343f,#a09575cd
-rofi.color-window:                   #a02f343f,#a02f343f,#a02f343f

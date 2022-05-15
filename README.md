@@ -12,7 +12,7 @@ Thanks to GITHUB, it's easiest thing to restore! 🔏
 ssh-keygen -t rsa -b 4096 -C 'tekola@qq.com'
 ```
 
-> of course, I think there is nobody will use your dotfiles ...  But as a remind, you need to just change the email address ad yours ...
+> As a remind, you need to just change the email address ad yours ...
 
 ## clone me!
 
@@ -52,8 +52,6 @@ sudo pacman-mirrors -i -c China -m rank
 Well, now, you can update and use aur! 
 
 ```bash
-# install aur helper
-# and build tools
 sudo pacman -Syyu
 sudo pacman -S base-devel yay paru
 ```
@@ -63,11 +61,10 @@ And, just run
 paru -S --noconfirm `cat softwareAUR.txt`
 ```
 
-btw, update this file daily:
+BTW, update this file daily:
 
 ```bash
-paru
-paru -Qeq > ./softwareAUR.txt
+paru && paru -Qeq > ./softwareAUR.txt
 ```
 
 ## pip
@@ -80,26 +77,14 @@ pip install -U pip
 
 # fonts
 
-.. just as a remind, i think you've already read the file
-[look-these.md](./messFiles/look-these.md)
+```bash
+paru -S ttf-linux-libertine ttf-inconsolata ttf-joypixels ttf-twemoji-color noto-fonts-emoji ttf-liberation ttf-droid wqy-bitmapfont wqy-microhei wqy-microhei-lite wqy-zenhei adobe-source-han-mono-cn-fonts adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts
+```
 
-Look the file [fonts](./fontsGIT.txt) will lead you.
+I've already put the rest to [./AURlist.txt](./AURlist.txt)!
 
 # oh-my-zsh
 
-Use this! 💗
-
 ```bash
-git clone git@github.com:ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-
-# neovim
-After auto download, you need to:
-
- - Run `sudo yarn global neovim` and goto `coc.nvim`, then run `yarn install`.
-
- - goto the `markdown-preview.nvim/app`，and run `yarn install`
-
-# virtual machine
-
-run `neofetch` to get your kernel version first, and install `linux510-virtualbox-host-modules` (replace the `510` to your kernel version)

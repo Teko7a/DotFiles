@@ -1,5 +1,0 @@
-yarn
-n
-neovim
-hexo-cli
-hugo
