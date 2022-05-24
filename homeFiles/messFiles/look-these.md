@@ -56,3 +56,25 @@ scrcpy
 
 # Tencent-meetings
 wemeet
+
+# convert a picture into blur and set it as lock wallpaper
+
+ + require: xautolock, imagemagick
+
+```bash
+convert wp.png -blur 0x5 i3lockblur.png
+```
+
+```bash
+#!/bin/zsh
+# /usr/bin/i3lcokblur
+i3lock -i /home/patricky/.i3lock/pictures/i3lockblur.png
+exit 0
+```
+
+```bash
+# i3config file
+# Lock screen
+bindsym $mod+q exec --no-startup-id i3lockblur
+exec --no-startup-id xautolock -time 10 -locker i3lockblur
+```

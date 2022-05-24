@@ -37,9 +37,9 @@ font xft:Source Han Sans CN 11
 floating_modifier $mod
 
 # start a terminal
+bindsym $mod+Return exec st
 bindsym $mod+Shift+Return exec kitty
-bindsym $mod+Return exec alacritty -vv
-bindsym $mod+Ctrl+Return exec st
+bindsym $mod+Ctrl+Return exec alacritty -vv
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -171,26 +171,25 @@ bindsym $mod+Ctrl+Left  workspace prev
 #                 set $ws2 2:
 
 set $ws1 1
+# :壹
 set $ws2 2
+# :貳
 set $ws3 3
+# :叄
 set $ws4 4
+# :肆
 set $ws5 5
+# :伍
 set $ws6 6
+# :陸
 set $ws7 7
+# :柒
 set $ws8 8
+# :捌
 set $ws9 9
+# :玖
 set $ws0 0
-
-# set $ws1 "壹"
-# set $ws2 "貳"
-# set $ws3 "叄"
-# set $ws4 "肆"
-# set $ws5 "伍"
-# set $ws6 "陸"
-# set $ws7 "柒"
-# set $ws8 "捌"
-# set $ws9 "玖"
-# set $ws0 "拾"
+# :拾
 
 # switch to workspace
 bindsym $mod+0 workspace number $ws10
@@ -229,7 +228,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9,  workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10, workspace $ws10
 
 # Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
+assign [class="surf"] 10
+for_window [class="surf"] move container to workspace $ws10
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
@@ -237,10 +237,12 @@ bindsym $mod+Shift+0 move container to workspace $ws10, workspace $ws10
 # Open specific applications in floating mode
 for_window [class="netease-cloud-music"] floating enable
 for_window [class="obs"] floating enable
+for_window [class="flameshot"] floating enable
 for_window [class="typora"] floating enable
 for_window [class="deepin-album"] floating enable
 for_window [class="wemeet"] floating enable
-for_window [class="st"] floating enable
+for_window [class="gnome-todo"] floating enable
+# for_window [class="alacritty"] floating enable
 
 # switch to workspace with urgent window automatically
 # for_window [urgent=latest] focus
@@ -290,7 +292,8 @@ mode "resize" {
 }
 
 # Lock screen
-# bindsym $mod+q exec --no-startup-id xflock4
+bindsym $mod+q exec --no-startup-id i3lockblur
+exec --no-startup-id xautolock -time 10 -locker i3lockblur
 
 # Autostart applications
 # exec --no-startup-id dex --autostart --environment i3
@@ -309,7 +312,7 @@ exec --no-startup-id picom
 
 # exec sleep 3s; xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal
 
-# exec sleep 3s; xrandr --output eDP-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output HDMI-1-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+exec sleep 3s; xrandr --output eDP-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output HDMI-1-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
