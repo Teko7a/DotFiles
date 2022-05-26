@@ -78,3 +78,6 @@ exit 0
 bindsym $mod+q exec --no-startup-id i3lockblur
 exec --no-startup-id xautolock -time 10 -locker i3lockblur
 ```
+
+# camera
+kamoso
