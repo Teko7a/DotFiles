@@ -1,4 +1,4 @@
-# DotFiles
+# Dot Files
 What? You did reset your os once again? 😅
 
 Thanks to GITHUB, it's easiest thing to restore! 🔏
@@ -6,7 +6,7 @@ Thanks to GITHUB, it's easiest thing to restore! 🔏
 # Things you need to do firstly
 ## git
  - install git (or you wont look this file unless using browser 😭).
- - config your git with:
+ - configure your git with:
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C 'tekola@qq.com'
@@ -22,9 +22,11 @@ ssh-keygen -t rsa -b 4096 -C 'tekola@qq.com'
 git clone git@github.com:Teko7a/DotFiles.git --recurse-submodules --remote-submodules
 ```
 
-## aur
+## aur (deprecated)
 
- - config your aur! `sudo vim /etc/pacman.conf`, add following:
+> recently I found that `archlinuxcn` isn't perfect...
+
+ - configure your AUR! `sudo vim /etc/pacman.conf`, add following:
 
 ```bash
 [archlinuxcn]

@@ -1,44 +1,51 @@
-# use docker to start a raw spacevim
+# look these....
+
+## boot disk
+```bash
+sudo dd bs=4M if=SW_DVD9_Win_Pro_10_1909_64BIT_English_Pro_Ent_EDU_N_MLF_X22-17395.ISO of=/dev/sda status=progress && sync
+```
+
+## use docker to start a raw spacevim
 docker pull spacevim/spacevim
 sudo docker run -it --rm spacevim/spacevim nvim
 
-# to paint
+## to paint
 kolourpaint
 
-# to count
+## to count
 cloc
 
-# better htop
+## better htop
 glances
 
-# better curl / wget
+## better curl / wget
 axel
 
-# easy man
+## easy man
 tldr
 
-# vim-diff-mode
+## vim-diff-mode
 vim -d Ac.cpp Wa.cpp
 
-# watch battery
+## watch battery
 acpi
 
-# save fonts
+## save fonts
 fc-cache -fv
 
-# prime fuck unordered_map
+## prime fuck unordered_map
 ```txt
 107897
 126271
 ```
 
-# use this to control volumn!
+## use this to control volumn!
 pavucontrol
 
-# do system config in bash
+## do system config in bash
 bmenu
 
-# do android projection
+## do android projection
 
 ```cpp
 paru -S android-tools scrcpy
@@ -54,10 +61,10 @@ adb connect 192.168.0.100:5555
 scrcpy
 ```
 
-# Tencent-meetings
+## Tencent-meetings
 wemeet
 
-# convert a picture into blur and set it as lock wallpaper
+## convert a picture into blur and set it as lock wallpaper
 
  + require: xautolock, imagemagick
 
@@ -66,18 +73,19 @@ convert wp.png -blur 0x5 i3lockblur.png
 ```
 
 ```bash
-#!/bin/zsh
-# /usr/bin/i3lcokblur
+##!/bin/zsh
+## /usr/bin/i3lcokblur
 i3lock -i /home/patricky/.i3lock/pictures/i3lockblur.png
 exit 0
 ```
 
 ```bash
-# i3config file
-# Lock screen
+## i3config file
+## Lock screen
 bindsym $mod+q exec --no-startup-id i3lockblur
 exec --no-startup-id xautolock -time 10 -locker i3lockblur
 ```
 
-# camera
+## camera
 kamoso
+
