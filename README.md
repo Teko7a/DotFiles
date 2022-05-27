@@ -90,3 +90,17 @@ I've already put the rest to [./AURlist.txt](./AURlist.txt)!
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+
+# Those service you may need..
+```bash
+sudo systemctl enable sddm
+sudo systemctl disable netctl
+sudo systemctl enable --now NetworkManager
+sudo systemctl enable --now tlp.service
+sudo systemctl enable --now v2raya
+sudo systemctl enable --now tlp.service
+sudo systemctl enable --now NetworkManager-dispatcher.service
+sudo systemctl mask systemd-rfkill.service
+sudo systemctl mask systemd-rfkill.socket
+sudo systemctl enable --now bluetooth
+```
